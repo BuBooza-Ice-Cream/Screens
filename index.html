@@ -11,7 +11,7 @@
 @font-face{font-family:"Kollektif";src:url("fonts/kollektif-bold.ttf") format("truetype");font-weight:500 900;font-display:block}
 /* Layout: fixed 1920×1080 stages scaled to fit; home view lists all three, #menu-ice / #menu-more / #promo show one fullscreen */
 :root{
-  --red:#A31D2B; --dark:#7E141F; --deep:#4F0C13; --cream:#F2DAAC; --milk:#FBF2E1; --pist:#9DB46A;
+  --red:#A31D2B; --dark:#7E141F; --deep:#4F0C13; --cream:#F2DAAC; --milk:#FBF2E1; --pist:#9DB46A; --gold:#D9A35B;
   --display:"Black Gumners",Impact,sans-serif;
   --body:"Kollektif",system-ui,sans-serif;
   color-scheme:dark;
@@ -27,7 +27,14 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
 .item a{color:var(--cream);font-weight:500}
 .frame{position:relative;width:100%;max-width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:#000}
 .solo .frame{position:fixed;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:0}
-.stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background:var(--red);color:var(--milk)}
+.stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;background-color:var(--red);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23F2DAAC' stroke-opacity='.09' stroke-width='2'%3E%3Cpath d='M60 18 72 48 102 60 72 72 60 102 48 72 18 60 48 48Z'/%3E%3Crect x='35' y='35' width='50' height='50' transform='rotate(45 60 60)'/%3E%3Ccircle cx='60' cy='60' r='9'/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse at 30% 20%,rgba(255,220,170,.16),transparent 60%);color:var(--milk)}
+/* warm Arab touches */
+.ar{font-family:"Noto Naskh Arabic","Noto Sans Arabic",serif;direction:rtl;unicode-bidi:isolate}
+.arch{margin:0;width:620px;height:760px;justify-self:center;border-radius:310px 310px 28px 28px;overflow:hidden;border:10px solid var(--cream);box-shadow:0 0 0 4px var(--gold),0 24px 50px rgba(0,0,0,.35);background:var(--dark)}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+.arch + .scoop,.arch + .big{display:none}
+.bar{background-image:linear-gradient(90deg,transparent,rgba(217,163,91,.25),transparent)}
+.bar::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,transparent 18px 30px)}
 
 /* shared stage pieces */
 .wm{font-family:var(--display);font-size:64px;color:var(--cream);letter-spacing:1px;line-height:1}
@@ -117,8 +124,9 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
 .step hr{border:0;border-top:2px solid rgba(242,218,172,.25);margin:0;width:100%}
 /* screen 2 cards */
 .menu .main{height:100%;box-sizing:border-box}
-.cards{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px}
-.card{background:rgba(242,218,172,.08);border:3px solid rgba(242,218,172,.25);border-radius:36px;padding:40px 44px 36px;display:flex;flex-direction:column;gap:30px}
+.cards{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:116px}
+.card{background:rgba(242,218,172,.08);border:3px solid rgba(217,163,91,.55);border-radius:160px 160px 36px 36px;padding:44px 44px 30px;display:flex;flex-direction:column;gap:22px}
+.card h5{text-align:center}
 .card .split i{width:108px;height:108px}
 .card h5{font-family:var(--display);font-weight:400;font-size:52px;line-height:1.3;margin:14px 0 0;color:var(--milk);text-wrap:balance}
 .card p{font-size:32px;line-height:1.3;margin:0;color:var(--cream)}
@@ -168,7 +176,7 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
     <div class="menu">
       <div class="main">
         <div class="top">
-          <div><h3>N-ice cream</h3><div class="sub">Handmade Middle Eastern ice cream</div></div>
+          <div><h3>N-ice cream</h3><div class="sub">Handmade Middle Eastern ice cream · <span class="ar">بوظة عربية</span></div></div>
           <div style="display:flex;align-items:flex-end;gap:28px"><div class="mini"><div class="scoop"><i class="ball b2" style="background:#9DB46A" data-face="happy"></i><i class="ball b1" style="background:#FFF6E6"></i><i class="cone"></i></div></div><div class="wm">BuBooza</div></div>
         </div>
         <div class="flav">
@@ -189,18 +197,18 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
       <aside class="side">
         <h4>Prices</h4>
         <div class="size"><div>Cup or cone<small>Up to 4 flavours</small></div><span class="price">$10</span></div>
-        <div class="size"><div>The Shakes<small>Regular $14 · Large $17</small></div><span class="price">$14</span></div>
-        <div class="size"><div>Iced Classics<small>Jallab · Rose · Limonada</small></div><span class="price">$7</span></div>
-        <div class="size"><div>HaBooza 500mL<small>Team-picked combos</small></div><span class="price">$25</span></div>
+        <div class="size"><div>The Shakes<small>Regular $12 · Large $15</small></div><span class="price">$12</span></div>
+        <div class="size"><div>Iced Classics<small>Regular $7 · Large $9</small></div><span class="price">$7</span></div>
+        <div class="size"><div>Take-away 500mL<small>Flavour mix picked by our team</small></div><span class="price">$25</span></div>
         <div class="note">Ask to taste before you choose.</div>
       </aside>
     </div>
-    <div class="bar"><span><b>Open 7 days</b> · 11am – 11pm</span><span>@buboozaicecream</span></div>
+    <div class="bar"><span><b>Open 7 days</b> · 11am – 11pm</span><span class="ar">أهلاً وسهلاً</span><span>@buboozaicecream</span></div>
   </div>
 </template>
 
 <template id="t-menu-more">
-  <div class="stage" style="background:var(--dark)">
+  <div class="stage" style="background-color:var(--dark)">
     <div class="menu" style="grid-template-columns:1fr">
       <div class="main">
         <div class="top">
@@ -223,7 +231,7 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
             <h5>The Shakes</h5>
             <p>Your chosen flavour, blended thick. Pick a sauce on top. Cream on top is included.</p>
             <div class="chips"><span>Chocolate sauce</span><span>Strawberry sauce</span><span>Cream on top</span></div>
-            <div class="foot"><span>Regular</span><b>$14</b><span>Large</span><b>$17</b></div>
+            <div class="foot"><span>Regular</span><b>$12</b><span>Large</span><b>$15</b></div>
           </div>
           <div class="card">
             <h5>Iced Classics</h5>
@@ -233,7 +241,7 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
               <div><b>Rose</b><span>Fragrant rose syrup over ice</span></div>
               <div><b>Limonada</b><span>Lebanese lemonade</span></div>
             </div>
-            <div class="foot"><span>Any drink</span><b>$7</b></div>
+            <div class="foot"><span>Regular</span><b>$7</b><span>Large</span><b>$9</b></div>
           </div>
         </div>
       </div>
@@ -254,19 +262,19 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
     </div>
     <div class="slide">
       <div><div class="k">678A The Horsley Dr</div><h6>Now open in Smithfield</h6><p>Our first official BuBooza store. Open every day, 11am to 11pm.</p></div>
-      <div class="scoop"><i class="ball b2" style="background:#9DB46A" data-face="happy"></i><i class="ball b1" style="background:#FFF6E6"></i><i class="cone"></i></div>
+      <figure class="arch"><img src="photos/stretch.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="scoop"><i class="ball b2" style="background:#9DB46A" data-face="happy"></i><i class="ball b1" style="background:#FFF6E6"></i><i class="cone"></i></div>
     </div>
     <div class="slide" style="background:var(--cream);color:var(--dark)">
       <div><div class="k" style="color:var(--red)">The original</div><h6 style="color:var(--red)">Kashta</h6><p style="color:var(--dark)">Clotted-cream ice cream, stretched and folded by hand, finished with pistachio.</p></div>
-      <div class="scoop"><i class="ball b1" style="background:#FFF6E6;top:180px;box-shadow:0 0 0 8px var(--red)" data-face="wink"></i><i class="cone"></i></div>
+      <figure class="arch"><img src="photos/kashta.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="scoop"><i class="ball b1" style="background:#FFF6E6;top:180px;box-shadow:0 0 0 8px var(--red)" data-face="wink"></i><i class="cone"></i></div>
     </div>
     <div class="slide" style="background:var(--dark)">
       <div><div class="k">Weddings · birthdays · corporate</div><h6>BuBooza at your event</h6><p>Live ice cream service for 120 guests and up. Enquire at bubooza.com/bookings</p></div>
-      <div class="big">120+<small>GUESTS</small></div>
+      <figure class="arch"><img src="photos/event.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="big">120+<small>GUESTS</small></div>
     </div>
     <div class="slide">
-      <div><div class="k">Take-home · 500mL · $25</div><h6>HaBooza</h6><p>Flavour combos picked by our team. Take a HaBooza to your habibi.</p></div>
-      <div class="scoop"><i class="ball b2" style="background:#D6335C" data-face="o"></i><i class="ball b1" style="background:#F6B93B"></i><i class="cone"></i></div>
+      <div><div class="k">Take-away · 500mL · $25</div><h6>Take it home</h6><p>A flavour mix picked by our team. Take a HaBooza to your habibi.</p></div>
+      <figure class="arch"><img src="photos/takeaway.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="scoop"><i class="ball b2" style="background:#D6335C" data-face="o"></i><i class="ball b1" style="background:#F6B93B"></i><i class="cone"></i></div>
     </div>
     <div class="bar"><span class="wm" style="font-size:40px">BuBooza</span><span class="pips"></span><span>@buboozaicecream</span></div>
   </div>
@@ -322,7 +330,7 @@ const CROSS_EVERY=600;   // seconds between crossings (10 min). Set TEST to true
 const TEST=false;
 const LEG=16;            // seconds per screen
 const ORDER=["menu-ice","menu-more","promo"];
-const MSG={"menu-ice":"Ahlan! Pick up to 4 flavours","menu-more":"Try the Jallab","promo":"Take a HaBooza to your habibi"};
+const MSG={"menu-ice":"Ahlan! Pick up to 4 flavours","menu-more":"Try the Jallab","promo":"Take some home, habibi!"};
 const ALLERGEN="Our products may contain or come into contact with milk, eggs, tree nuts (incl. pistachio, almond), peanuts, gluten and soy. Please tell staff about any allergies before ordering.";
 function walk(f){const w=f.querySelector(".walker");if(!w)return;w.classList.remove("go");void w.offsetWidth;w.classList.add("go");}
 function schedule(id,f){const P=TEST?60:CROSS_EVERY,off=ORDER.indexOf(id)*LEG;
