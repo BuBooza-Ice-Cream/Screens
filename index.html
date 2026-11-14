@@ -164,6 +164,16 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
 .item button:focus-visible,.item a:focus-visible{outline:3px solid var(--milk);outline-offset:2px}
 .item .acts{display:flex;gap:14px;align-items:center}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}.scoop,.scoop *{animation:none!important}}
+
+/* screen 1 flagship */
+.feature{flex:1;display:grid;grid-template-columns:420px 1fr;gap:64px;align-items:center;padding-bottom:40px;min-height:0}
+.pic{position:relative;width:420px;height:480px}
+.pic .arch{width:420px;height:480px;border-radius:210px 210px 24px 24px}
+.pic .scoop{position:absolute;left:-100px;top:-120px;transform:scale(.68)}
+.fk{font-size:32px;letter-spacing:6px;text-transform:uppercase;font-weight:700;color:var(--cream)}
+.fh{font-family:var(--display);font-size:130px;line-height:1.1;color:var(--milk);margin:34px 0 18px}
+.ftxt p{font-size:40px;line-height:1.3;margin:0 0 30px;color:var(--cream);max-width:20ch}
+.today{font-size:32px;line-height:1.35;color:var(--milk);border-top:3px solid var(--gold);padding-top:28px;max-width:26ch}
 </style>
 </head>
 <body>
@@ -179,19 +189,14 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
           <div><h3>N-ice cream</h3><div class="sub">Handmade Middle Eastern ice cream · <span class="ar">بوظة عربية</span></div></div>
           <div style="display:flex;align-items:flex-end;gap:28px"><div class="mini"><div class="scoop"><i class="ball b2" style="background:#9DB46A" data-face="happy"></i><i class="ball b1" style="background:#FFF6E6"></i><i class="cone"></i></div></div><div class="wm">BuBooza</div></div>
         </div>
-        <div class="flav">
-          <div><i class="dot" style="background:#FFF6E6"></i>Kashta<span class="star">ORIGINAL</span></div>
-          <div><i class="dot" style="background:#9DB46A"></i>Pistachio<span class="star">FAVOURITE</span></div>
-          <div><i class="dot" style="background:#EADBC0"></i>Almond</div>
-          <div><i class="dot" style="background:#5A3424"></i>Chocolate</div>
-          <div><i class="dot" style="background:#F2A65A"></i>Apricot</div>
-          <div><i class="dot" style="background:#F6B93B"></i>Mango</div>
-          <div><i class="dot" style="background:#B7C96A"></i>Avocado</div>
-          <div><i class="dot" style="background:#F3E37C"></i>Lemon</div>
-          <div><i class="dot" style="background:#F0C24B"></i>Passionfruit</div>
-          <div><i class="dot" style="background:#D6335C"></i>Raspberry</div>
-          <div><i class="dot" style="background:#F08CA0"></i>Strawberry</div>
-          <div style="opacity:.6;font-size:32px">Flavours rotate daily</div>
+        <div class="feature">
+          <div class="pic"><figure class="arch"><img src="photos/kashta.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="scoop"><i class="ball b1" style="background:#FFF6E6;top:180px;box-shadow:0 0 0 10px #9DB46A" data-face="happy"></i><i class="cone"></i></div></div>
+          <div class="ftxt">
+            <div class="fk">Our flagship</div>
+            <div class="fh">Kashta</div>
+            <p>Creamy clotted-cream booza, coated in crushed pistachios.</p>
+            <div class="today">Our flavours change with the season. Come see what’s in the cabinet today, and ask for a taste, habibi!</div>
+          </div>
         </div>
       </div>
       <aside class="side">
@@ -265,7 +270,7 @@ body{margin:0;background:var(--deep);color:var(--cream);font-family:var(--body)}
       <figure class="arch"><img src="photos/stretch.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="scoop"><i class="ball b2" style="background:#9DB46A" data-face="happy"></i><i class="ball b1" style="background:#FFF6E6"></i><i class="cone"></i></div>
     </div>
     <div class="slide" style="background:var(--cream);color:var(--dark)">
-      <div><div class="k" style="color:var(--red)">The original</div><h6 style="color:var(--red)">Kashta</h6><p style="color:var(--dark)">Clotted-cream ice cream, stretched and folded by hand, finished with pistachio.</p></div>
+      <div><div class="k" style="color:var(--red)">The original</div><h6 style="color:var(--red)">Kashta</h6><p style="color:var(--dark)">Clotted-cream booza, stretched and folded by hand, coated in crushed pistachios.</p></div>
       <figure class="arch"><img src="photos/kashta.jpg" alt="" onerror="this.parentNode.remove()"></figure><div class="scoop"><i class="ball b1" style="background:#FFF6E6;top:180px;box-shadow:0 0 0 8px var(--red)" data-face="wink"></i><i class="cone"></i></div>
     </div>
     <div class="slide" style="background:var(--dark)">
