@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BuBooza Screen 3</title><style>html,body{margin:0;height:100%;background:#6b0f12;overflow:hidden}img{position:fixed;inset:0;width:100vw;height:100vh;object-fit:cover;opacity:0;transition:opacity 1s}img.on{opacity:1}</style></head><body>
+<script>
+var v=Math.floor(Date.now()/600000),n=['canva-screen-3-1.png','canva-screen-3-2.png','canva-screen-3-3.png'],im=n.map(function(s){var i=document.createElement('img');i.src=s+'?v='+v;document.body.appendChild(i);return i}),k=0;
+im[0].className='on';
+setInterval(function(){im[k].className='';k=(k+1)%im.length;im[k].className='on'},15000);
+setTimeout(function(){location.reload()},600000);
+</script></body></html>
