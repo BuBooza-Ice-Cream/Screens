@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BuBooza Screen 2 – Back at 2pm</title>
+<style>
+@font-face{font-family:"Black Gumners";src:url("fonts/black-gumners-bold.woff") format("woff");font-display:block}
+@font-face{font-family:"Kollektif";src:url("fonts/kollektif.ttf") format("truetype");font-weight:400;font-display:block}
+@font-face{font-family:"Kollektif";src:url("fonts/kollektif-bold.ttf") format("truetype");font-weight:700;font-display:block}
+:root{--red:#A31D2B;--dark:#7E141F;--deep:#4F0C13;--cream:#F2DAAC;--milk:#FBF2E1;--display:"Black Gumners",Impact,sans-serif;--body:"Kollektif",system-ui,sans-serif}
+html,body{margin:0;height:100%;background:var(--deep);overflow:hidden}
+.stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden;color:var(--milk);font-family:var(--body);
+background-color:var(--red);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23F2DAAC' stroke-opacity='.09' stroke-width='2'%3E%3Cpath d='M60 18 72 48 102 60 72 72 60 102 48 72 18 60 48 48Z'/%3E%3Crect x='35' y='35' width='50' height='50' transform='rotate(45 60 60)'/%3E%3Ccircle cx='60' cy='60' r='9'/%3E%3C/g%3E%3C/svg%3E"),radial-gradient(ellipse at 28% 45%,rgba(255,220,170,.22),transparent 55%)}
+.abu{position:absolute;left:90px;bottom:60px;width:720px;height:876px;animation:sway 3.2s ease-in-out infinite;transform-origin:50% 100%}
+.abu svg{width:100%;height:100%;display:block} .abu svg *{transform-box:fill-box}
+.abu .head{transform-origin:50% 100%;animation:nod 1.6s ease-in-out infinite alternate}
+.abu .arm.l{transform-origin:100% 0;animation:lift 1.2s ease-in-out infinite alternate}
+.abu .arm.r{transform-origin:0 0;animation:lift 1.2s ease-in-out infinite alternate-reverse}
+@keyframes sway{0%{transform:translateX(0) translateY(0) rotate(0)}25%{transform:translateX(-40px) translateY(-18px) rotate(-3deg)}50%{transform:translateX(0) translateY(0) rotate(0)}75%{transform:translateX(40px) translateY(-18px) rotate(3deg)}100%{transform:translateX(0) translateY(0) rotate(0)}}
+@keyframes nod{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+@keyframes lift{from{transform:rotate(-14deg)}to{transform:rotate(12deg)}}
+.bubble{position:absolute;left:840px;top:330px;width:1020px;padding:56px 60px !important;background:var(--milk);color:var(--dark);border-radius:56px;padding:64px 72px;box-sizing:border-box;box-shadow:0 14px 0 rgba(0,0,0,.18)}
+.bubble::after{content:"";position:absolute;left:-60px;top:150px;border:40px solid transparent;border-right:70px solid var(--milk);border-left:0}
+.bubble .hi{white-space:nowrap;font-family:var(--display);font-size:96px;line-height:1.05;color:var(--red);margin:0 0 28px}
+.bubble .big{white-space:nowrap;font:700 62px/1.2 var(--body);color:var(--dark);margin:0}
+.bubble .big span{background:var(--red);color:var(--milk);padding:0 18px 4px;border-radius:14px;white-space:nowrap}
+.allergen{z-index:2;position:absolute;left:0;right:0;bottom:84px;height:100px;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 72px;font-size:30px;line-height:1.25;background:#8A1A24;color:var(--cream)}
+.bar{z-index:2;position:absolute;left:0;right:0;bottom:0;height:84px;background:var(--dark);display:flex;align-items:center;justify-content:space-between;padding:0 72px;font-size:28px;color:var(--cream)}
+.wm{font-family:var(--display);font-size:40px}
+</style></head><body>
+<div class="stage" id="s">
+  <div class="abu"><svg viewBox="8 22 184 224" preserveAspectRatio="xMidYMax meet">
+      <g class="guy">
+        <rect x="52" y="146" width="96" height="98" rx="24" fill="#FAF7F1"/>
+        <rect x="54" y="212" width="92" height="9" fill="#E6DFD2"/>
+        <path d="M84 148 L100 166 L116 148" fill="none" stroke="#E6DFD2" stroke-width="4"/>
+        <g fill="#D9D1C3"><circle cx="86" cy="176" r="3.5"/><circle cx="114" cy="176" r="3.5"/><circle cx="86" cy="198" r="3.5"/><circle cx="114" cy="198" r="3.5"/></g>
+        <g class="arm l">
+          <path d="M62 156 Q36 166 30 196" stroke="#FAF7F1" stroke-width="22" stroke-linecap="round" fill="none"/>
+          <polygon points="18,184 42,184 30,214" fill="#DDAE62"/>
+          <path d="M15 186 Q11 170 21 164 Q23 151 30 140 Q37 151 39 164 Q49 170 45 186 Z" fill="#A3B35C"/><path d="M22 172 Q25 160 30 150" stroke="#B8C66E" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle cx="30" cy="196" r="11" fill="#F2C6A6"/>
+        </g>
+        <g class="arm r">
+          <path d="M138 156 Q164 166 170 196" stroke="#FAF7F1" stroke-width="22" stroke-linecap="round" fill="none"/>
+          <polygon points="158,184 182,184 170,214" fill="#DDAE62"/>
+          <path d="M155 186 Q151 170 161 164 Q163 151 170 140 Q177 151 179 164 Q189 170 185 186 Z" fill="#A3B35C"/><path d="M162 172 Q165 160 170 150" stroke="#B8C66E" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <circle cx="170" cy="196" r="11" fill="#F2C6A6"/>
+        </g>
+        <g class="head">
+          <circle cx="55" cy="112" r="10" fill="#F0BFA0"/><circle cx="145" cy="112" r="10" fill="#F0BFA0"/>
+          <ellipse cx="100" cy="108" rx="46" ry="44" fill="#F6D0B4"/>
+          <path d="M58 84 q-4 10 -1 21" stroke="#6B6B6B" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <path d="M142 84 q4 10 1 21" stroke="#6B6B6B" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <path d="M58 84 L66 34 Q100 26 134 34 L142 84 Z" fill="#7E141F"/>
+          <path d="M70 94 q12 -10 24 -2" stroke="#3A3A3A" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M106 92 q12 -8 24 2" stroke="#3A3A3A" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <path d="M74 108 q8 -8 16 0" stroke="#2A0A0E" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <path d="M110 108 q8 -8 16 0" stroke="#2A0A0E" stroke-width="4" stroke-linecap="round" fill="none"/>
+          <ellipse cx="70" cy="122" rx="9" ry="5" fill="#E89A8A" opacity=".6"/><ellipse cx="130" cy="122" rx="9" ry="5" fill="#E89A8A" opacity=".6"/>
+          <path d="M100 126 C90 118 72 120 68 130 C66 139 77 141 85 137 C91 134 96 134 100 132 C104 134 109 134 115 137 C123 141 134 139 132 130 C128 120 110 118 100 126Z" fill="#5E5E5E"/>
+          <circle cx="100" cy="119" r="12" fill="#EBA08A"/>
+          <path d="M92 143 q8 6 16 0" stroke="#8A3A30" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+      </g>
+    </svg></div>
+  <div class="bubble"><p class="hi">Smile my HaBooza,</p><p class="big">we will have more ice cream at <span>2pm</span></p></div>
+  <div class="allergen">Our products may contain or come into contact with milk, eggs, tree nuts (incl. pistachio, almond), peanuts, gluten and soy.<br>Please tell staff about any allergies before ordering.</div>
+  <div class="bar"><span class="wm">BuBooza</span><span>Open 7 days · 11am – 11pm</span><span>@buboozaicecream</span></div>
+</div>
+<script>function fit(){var k=Math.min(innerWidth/1920,innerHeight/1080),s=document.getElementById("s");s.style.transform="scale("+k+")";s.style.left=(innerWidth-1920*k)/2+"px";s.style.top=(innerHeight-1080*k)/2+"px"}addEventListener("resize",fit);fit();
+function shrink(el,max){var w=el.parentNode.clientWidth-120,fs=parseFloat(getComputedStyle(el).fontSize);while(el.scrollWidth>(max||w)&&fs>20){fs--;el.style.fontSize=fs+"px"}}
+document.fonts.ready.then(function(){document.querySelectorAll(".bubble p").forEach(function(p){shrink(p)})});</script>
+</body></html>
