@@ -2,6 +2,7 @@
 <script>
 var v=Math.floor(Date.now()/600000),n=['canva-screen-3-1.png','canva-screen-3-2.png','canva-screen-3-3.png','screen-3-careers.html'],im=n.map(function(s){var i=document.createElement(/\.html$/.test(s)?'iframe':'img');i.src=s+'?v='+v;document.body.appendChild(i);return i}),k=0;
 im[0].className='on';
-setInterval(function(){im[k].className='';k=(k+1)%im.length;im[k].className='on'},15000);
+function d(i){return /careers/.test(n[i])?30000:15000}
+(function t(){setTimeout(function(){im[k].className='';k=(k+1)%im.length;im[k].className='on';t()},d(k))})();
 setTimeout(function(){location.reload()},600000);
 </script></body></html>
